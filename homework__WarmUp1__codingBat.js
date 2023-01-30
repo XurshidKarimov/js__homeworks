@@ -75,3 +75,43 @@ function in1020(a, b){
     return a >= 10 && a <= 20 || b >= 10 && b <= 20;
 }
 
+function hasTeen(a, b, c){
+    return [a, b, c].some(item => item >= 13 && item <= 19);
+}
+
+function loneTeen(a, b){
+    return ([a, b].every(item => item >= 13 && item <= 19)) ? false : ([a, b].some(item => item >= 13 && item <= 19));
+}
+
+function delDel(str){
+    return str.indexOf("del") == 1 ? str.replace("del", '') : str; 
+}
+
+function mixStart(str){
+    return /^[a-z]ix/.test(str);
+}
+
+function startOz(str){
+    return str.startsWith("oz") ? "oz" : str[0] == "o" ? str[0] : str[1] == "z" ? str[1] : "";
+}
+
+function intMax(a, b, c){
+    return Math.max(a,b,c);
+}
+
+function close10(a, b){
+    let start = Math.abs(a - 10), end = Math.abs(b - 10);
+    return start == end ? 0 : start < end ? a : b;
+}
+
+function in3050(a, b){
+    let _3040 = [a, b].every(item => item >= 30 && item <= 40);
+    let _4050 = [a, b].every(item => item >= 40 && item <= 50);
+    
+    return _3040 || _4050;
+}
+
+function max1020(a, b){
+    let state = [a,b].every(item => item >= 10 && item <= 20);
+    return state ? Math.max(a, b) : (!(a >= 10 && a <= 20) && !(b >= 10 && b <= 20)) ? 0 : (a >= 10 && a <= 20) ? a : b;
+}
