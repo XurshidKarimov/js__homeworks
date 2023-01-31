@@ -130,9 +130,9 @@ function endUp(str){
 }
 
 function everyNth(str, n){
-    let word = '';
+    let result = '';
     for(let x = 0; x < str.length; x += n){
-      word += str[x];
+      result += str[x];
     }
-    return word;
+    return result;
 }
