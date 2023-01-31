@@ -115,3 +115,24 @@ function max1020(a, b){
     let state = [a,b].every(item => item >= 10 && item <= 20);
     return state ? Math.max(a, b) : (!(a >= 10 && a <= 20) && !(b >= 10 && b <= 20)) ? 0 : (a >= 10 && a <= 20) ? a : b;
 }
+
+function stringE(str){
+    let len = str.match(/e/g).length;
+    return len >= 1 && len <= 3;
+}
+
+function lastDigit(a, b, c){
+    return a%10 == b%10 ? true : false;
+}
+
+function endUp(str){
+    return str.length <= 2 ? str.toUpperCase() : `${str.slice(str.length * -1, -3)}${str.slice(-3).toUpperCase()}`;
+}
+
+function everyNth(str, n){
+    let word = '';
+    for(let x = 0; x < str.length; x += n){
+      word += str[x];
+    }
+    return word;
+}
